@@ -1,0 +1,116 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Include border and padding in the element's total width and height */
+  font-family: "Poppins", sans-serif; /* Set default font family */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+/* === Education Start === */
+
+:root {
+  --iconBGColor: #1c1e1c; /* Define custom CSS variables */
+  --bgColor: #000000;
+  --textBGColor: #fff;
+  --themeColor: #eb00d4;
+  --sideBGColor: #040404;
+}
+
+body {
+  width: 90%; /* Set body width */
+  min-height: 5vh; /* Set minimum height */
+  background-color: var(--bgColor); /* Set background color using custom variable */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: var(--textBGColor); /* Set text color using custom variable */
+}
+
+.container {
+  width: 220%; /* Set container width */
+  min-height: 5vh; /* Set minimum height */
+  height: 3vh; /* Set height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: baseline; /* Align items to the baseline */
+  margin-top: -30px; /* Add negative margin top */
+  padding: 30px 10%; /* Set padding */
+  padding-right: calc(10% - 30px); /* Calculate right padding */
+}
+
+.row {
+  display: grid; /* Use grid layout for rows */
+  grid-template-columns: 1fr 1fr; /* Set grid template columns */
+  grid-column-gap: 20px; /* Set gap between grid columns */
+}
+
+.col {
+  padding: 40px; /* Set padding for columns */
+}
+
+.title {
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add bottom margin */
+}
+
+.box {
+  margin-bottom: 20px; /* Add bottom margin for boxes */
+}
+
+h4 {
+  font-size: 16px; /* Set font size */
+  margin-bottom: 5px; /* Add bottom margin */
+}
+
+.col header .title {
+  font-family: helvetica; /* Set font family */
+  color: var(--textBGColor); /* Set text color using custom variable */
+  padding: 0 0 20px 30px; /* Set padding */
+}
+
+.col .contents {
+  padding: 0 30px; /* Set padding for contents */
+  border-left: 2px solid #e700bc; /* Set left border */
+}
+
+.col .contents .box {
+  position: relative; /* Set position relative */
+  padding: 20px; /* Set padding for boxes */
+  border: 1px solid #ff00b3; /* Set border color */
+  background-color: #000000; /* Set background color */
+  cursor: pointer; /* Set cursor style */
+  transition: all 0.4s; /* Add transition effect */
+  margin-bottom: 20px; /* Add bottom margin */
+}
+
+.col .contents .box:hover {
+  box-shadow: 0 3px 12px 0 #ff3fc2; /* Add box shadow on hover */
+  border: none; /* Remove outside border on hover */
+}
+
+.col .contents .box::before {
+  content: '/'; /* Add content before the box */
+  position: absolute; /* Set position absolute */
+  width: 16px; /* Set width */
+  height: 16px; /* Set height */
+  border-radius: 100%; /* Set border radius */
+  right: calc(100% + 22px); /* Position to the right */
+  top: 0; /* Position to the top */
+  background-color: #f600cd; /* Set background color */
+}
+
+.box h4 {
+  position: relative; /* Set position relative for h4 */
+  color: #ff00ae; /* Set text color */
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: 1fr 1fr; /* Set grid template columns for larger screens */
+    grid-column-gap: 5px; /* Set smaller gap between grid columns */
+  }
+}

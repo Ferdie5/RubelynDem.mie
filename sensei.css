@@ -1,0 +1,111 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Hobbies Start === */
+
+/* Root Variables */
+:root {
+  --iconBGColor: #1c1e1c;
+  --bgColor: #000000;
+  --textBGColor: #fff;
+  --themeColor: #eb00d4;
+  --sideBGColor: #040404;
+}
+
+/* Body Styling */
+body {
+  width: 90%;
+  min-height: 5vh;
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textBGColor);
+}
+
+/* Container Styling */
+.container {
+  width: 220%;
+  min-height: 5vh;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  margin-top: -30px;
+  padding: 30px 10%;
+  padding-right: calc(10% - 30px);
+  position: relative; /* Add relative positioning */
+}
+
+/* Column Styling */
+.col {
+  padding: 40px;
+  border: 1px solid #f900c3;
+  margin-left: 150px;
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 50px; /* Position above the container */
+  left: 50%; /* Initially centered */
+  transform: translateX(-50%); /* Center horizontally */
+  animation: moveBackForth 4s infinite; /* Animation for movement */
+}
+
+/* Keyframes for Title Animation */
+@keyframes moveBackForth {
+  0%, 100% {
+    left: 50%; /* Start and end position */
+  }
+  50% {
+    left: 0; /* Middle position */
+  }
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.box {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+h3{
+  color:#eb00d4;
+}
+.col header .title {
+  font-family: helvetica;
+  color: var(--textBGColor);
+  padding: 0px 0px 20px 30px;
+}
+
+.col .contents {
+  padding: 0% 30px;
+  border-left: 2px solid #fc00c1;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  main.row {
+    grid-template-columns: 1fr;
+  }
+  .row.col:nth-child(2) {
+    margin-top: 100px;
+    margin-left: 150px;
+  }
+}
